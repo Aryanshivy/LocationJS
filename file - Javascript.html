@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript - File</title>
+</head>
+
+<body>
+    <h1>What's Your State? Find it.</h1>
+    <script>
+        let database = [
+            { username: "Aryan", password: "1713" },
+            { username: "aryan", password: "1713" },
+        ]
+        function isuservalid(usernameprompt, passwordprompt) {
+            for (var i = 0; i < database.length; i++) {
+                if (database[i].username === usernameprompt && database[i].password === passwordprompt) {
+                    if (n == "Haryana") {
+                        window.open("https://www.google.com/maps/place/Haryana/@29.2904069,76.0389249,8z/data=!3m1!4b1!4m6!3m5!1s0x390db00b8670400b:0x732eaab4aaa6c143!8m2!3d29.0587757!4d76.085601!16zL20vMDNwN3I?entry=ttu", "_top")
+                    }
+                    else if (n == "Punjab") {
+                        window.open("https://www.google.com/maps/place/Punjab/data=!4m2!3m1!1s0x391964aa569e7355:0x8fbd263103a38861?sa=X&ved=1t:242&ictx=111", "_top")
+                    }
+                    else if (n == "Chandigarh") {
+                        window.open("https://www.google.com/maps/place/Chandigarh/data=!4m2!3m1!1s0x390fed0be66ec96b:0xa5ff67f9527319fe?sa=X&ved=1t:242&ictx=111", "_top")
+                    }
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        let n = prompt("Enter your location? ");
+        if (n == "Punjab" || n == "Haryana" || n == "Chandigarh") {
+            let name = prompt("Enter your username? ");
+            let password = prompt("Enter your password? ");
+            isuservalid(name, password);
+        }
+        else {
+            alert("Access denied For You!!! ");
+        }
+
+    </script>
+
+</body>
+
+</html>
